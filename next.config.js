@@ -1,10 +1,34 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // All images are served from /public, so this can remain empty.
-    // If you later need external domains, add them under remotePatterns.
-    remotePatterns: []
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cryptoleakv3.vercel.app",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "coinpoker.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ggpoker.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.unibet.eu",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.bet365.com",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
