@@ -1,111 +1,132 @@
-import Image from "next/image";
+import React from "react";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-black text-white">
-      <div className="max-w-4xl w-full text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-          Poker Bonuses for Dutch Players
-          <br />
-          <span className="text-gray-400 text-2xl">
-            Poker bonussen voor Nederlandse spelers
-          </span>
+    <main className="min-h-screen bg-gray-50 px-4 py-12">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-3xl font-bold mb-4">
+          🎁 Poker Bonuses for Dutch Players
         </h1>
-
-        <p className="text-lg md:text-xl mb-10">
-          Compare the best welcome bonuses from licensed online poker sites.
-          <br />
-          Vergelijk de beste welkomstbonussen van legale online pokersites.
+        <p className="text-gray-600 mb-10">
+          Compare the best poker rakeback and welcome bonuses available for players in the Netherlands. 🇳🇱 KSA Licensed or Crypto Options.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid gap-8">
+          {/* CoinPoker */}
+          <div className="bg-white rounded-xl shadow p-6 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              {/* Notice the full filename: coinpoker.png.jpg */}
+              <img
+                src="/coinpoker.png.jpg"
+                alt="CoinPoker logo"
+                className="w-16 h-16 object-contain"
+              />
+              <div className="text-left">
+                <h2 className="text-xl font-semibold">CoinPoker</h2>
+                <p className="text-sm text-gray-500">
+                  Crypto Poker Room with Rakeback. No KYC. Global Access.
+                </p>
+                <ul className="text-sm mt-2 text-gray-700">
+                  <li>
+                    <strong>Rakeback:</strong> 35% Rakeback
+                  </li>
+                  <li>
+                    <strong>Bonus:</strong> Welcome Bonuses Available
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a
+              href="https://coinpoker.nl"
+              className="bg-green-600 text-white font-semibold px-4 py-2 rounded hover:bg-green-700"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Now
+            </a>
+          </div>
+
           {/* GG Poker */}
-          <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
-            <h2 className="text-2xl font-bold mb-2">GG Poker</h2>
-            <Image
-              src="/ggpoker.png"
-              alt="GG Poker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-              unoptimized
-            />
-            <p className="mb-4">
-              €100 in rewards + Freeroll Tickets
-              <br />
-              KSA Licensed
-            </p>
-            <span className="bg-yellow-500 text-black font-bold py-2 px-4 rounded inline-block">
+          <div className="bg-white rounded-xl shadow p-6 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              {/* Full filename: ggpoker.png.png */}
+              <img
+                src="/ggpoker.png.png"
+                alt="GGPoker logo"
+                className="w-16 h-16 object-contain"
+              />
+              <div className="text-left">
+                <h2 className="text-xl font-semibold">GG Poker</h2>
+                <p className="text-sm text-gray-500">
+                  Up to $600 Bonus + Free Tournament Tickets (KSA Licensed)
+                </p>
+                <ul className="text-sm mt-2 text-gray-700">
+                  <li>
+                    <strong>Rakeback:</strong> Up to 60%
+                  </li>
+                  <li>
+                    <strong>Bonus:</strong> $600 Bonus + Tickets
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span className="bg-yellow-400 text-white font-semibold px-4 py-2 rounded">
               Coming Soon
             </span>
           </div>
 
           {/* Unibet Poker */}
-          <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
-            <h2 className="text-2xl font-bold mb-2">Unibet Poker</h2>
-            <Image
-              src="/unibet.png"
-              alt="Unibet Poker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-              unoptimized
-            />
-            <p className="mb-4">
-              €200 Bonus + Freeroll Tickets
-              <br />
-              KSA Licensed
-            </p>
-            <span className="bg-yellow-500 text-black font-bold py-2 px-4 rounded inline-block">
+          <div className="bg-white rounded-xl shadow p-6 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              {/* Full filename: unibet.png.png */}
+              <img
+                src="/unibet.png.png"
+                alt="Unibet Poker logo"
+                className="w-16 h-16 object-contain"
+              />
+              <div className="text-left">
+                <h2 className="text-xl font-semibold">Unibet Poker</h2>
+                <p className="text-sm text-gray-500">$200 Bonus + Freerolls (KSA Licensed)</p>
+                <ul className="text-sm mt-2 text-gray-700">
+                  <li>
+                    <strong>Rakeback:</strong> Up to 35%
+                  </li>
+                  <li>
+                    <strong>Bonus:</strong> $200 Welcome Bonus
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span className="bg-yellow-400 text-white font-semibold px-4 py-2 rounded">
               Coming Soon
             </span>
           </div>
 
           {/* Bet365 Poker */}
-          <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
-            <h2 className="text-2xl font-bold mb-2">Bet365 Poker</h2>
-            <Image
-              src="/bet365.png"
-              alt="Bet365 Poker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-              unoptimized
-            />
-            <p className="mb-4">
-              €365 Bonus Offer
-              <br />
-              KSA Licensed
-            </p>
-            <span className="bg-yellow-500 text-black font-bold py-2 px-4 rounded inline-block">
+          <div className="bg-white rounded-xl shadow p-6 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              {/* Full filename: bet365.png.png */}
+              <img
+                src="/bet365.png.png"
+                alt="Bet365 Poker logo"
+                className="w-16 h-16 object-contain"
+              />
+              <div className="text-left">
+                <h2 className="text-xl font-semibold">Bet365 Poker</h2>
+                <p className="text-sm text-gray-500">$365 Bonus Offer (KSA Licensed)</p>
+                <ul className="text-sm mt-2 text-gray-700">
+                  <li>
+                    <strong>Rakeback:</strong> Varies
+                  </li>
+                  <li>
+                    <strong>Bonus:</strong> $365 Bonus
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span className="bg-yellow-400 text-white font-semibold px-4 py-2 rounded">
               Coming Soon
             </span>
-          </div>
-
-          {/* CoinPoker */}
-          <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
-            <h2 className="text-2xl font-bold mb-2">CoinPoker</h2>
-            <Image
-              src="/coinpoker.png"
-              alt="CoinPoker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-              unoptimized
-            />
-            <p className="mb-4">
-              Crypto Poker with Rakeback
-              <br />
-              No KYC, Global Access
-            </p>
-            <a
-              href="https://coinpoker.nl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded inline-block"
-            >
-              Play Now
-            </a>
           </div>
         </div>
       </div>
