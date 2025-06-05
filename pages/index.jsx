@@ -22,17 +22,43 @@ export default function Home() {
             gap: "2rem",
             alignItems: "center",
             marginTop: "2rem",
+            flexWrap: "wrap"
           }}
         >
-          {/* GG Poker logo */}
+          {/* Bet365 logo */}
           <div style={{ textAlign: "center" }}>
             <Image
-              src="/images/gg-poker.png"
-              alt="GG Poker Logo"
+              src="/images/bet365.png"
+              alt="Bet365 Logo"
               width={200}
               height={100}
+              priority
             />
-            <p>GG Poker</p>
+            <p>Bet365</p>
+          </div>
+
+          {/* CoinPoker logo */}
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/coinpoker.png"
+              alt="CoinPoker Logo"
+              width={200}
+              height={100}
+              priority
+            />
+            <p>CoinPoker</p>
+          </div>
+
+          {/* GGPoker logo */}
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/ggpoker.png"
+              alt="GGPoker Logo"
+              width={200}
+              height={100}
+              priority
+            />
+            <p>GGPoker</p>
           </div>
 
           {/* Unibet logo */}
@@ -42,19 +68,9 @@ export default function Home() {
               alt="Unibet Logo"
               width={200}
               height={100}
+              priority
             />
             <p>Unibet</p>
-          </div>
-
-          {/* PokerStars logo */}
-          <div style={{ textAlign: "center" }}>
-            <Image
-              src="/images/pokerstars.png"
-              alt="PokerStars Logo"
-              width={200}
-              height={100}
-            />
-            <p>PokerStars</p>
           </div>
         </div>
       </main>
