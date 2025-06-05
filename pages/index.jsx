@@ -88,4 +88,3 @@ export default function Home() {
       {/* ...content... */}
     </main>
   );
-}  <--- Correct
