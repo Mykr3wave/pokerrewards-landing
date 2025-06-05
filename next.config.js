@@ -1,8 +1,7 @@
 /**
  * next.config.js
  *
- * In this setup all logos live under /public/images/,
- * so no special `images.domains` configuration is needed.
+ * We are only loading local images from /public/images/, so no extra `images.domains` config is required.
  */
 module.exports = {
   reactStrictMode: true
