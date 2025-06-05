@@ -1,4 +1,4 @@
-// pages/index.js
+// pokerrewards-landing/pages/index.js
 
 import Head from "next/head";
 import Image from "next/image";
@@ -6,47 +6,47 @@ import Image from "next/image";
 const sites = [
   {
     name: "TigerGaming",
-    href: "https://affiliate.example.com/tigergaming?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/tigergaming?ref=YOUR_TRACKING_CODE",
     img: "/images/tigergaming.png",
   },
   {
     name: "WPT Global",
-    href: "https://affiliate.example.com/wptglobal?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/wptglobal?ref=YOUR_TRACKING_CODE",
     img: "/images/wptglobal.png",
   },
   {
     name: "CoinPoker",
-    href: "https://affiliate.example.com/coinpoker?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/coinpoker?ref=YOUR_TRACKING_CODE",
     img: "/images/coinpoker.png",
   },
   {
     name: "4Poker",
-    href: "https://affiliate.example.com/4poker?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/4poker?ref=YOUR_TRACKING_CODE",
     img: "/images/4poker.png",
   },
   {
     name: "Phenom Poker",
-    href: "https://affiliate.example.com/phenompoker?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/phenompoker?ref=YOUR_TRACKING_CODE",
     img: "/images/phenompoker.png",
   },
   {
     name: "ClubGG",
-    href: "https://affiliate.example.com/clubgg?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/clubgg?ref=YOUR_TRACKING_CODE",
     img: "/images/clubgg.png",
   },
   {
     name: "iPoker.it Italy",
-    href: "https://affiliate.example.com/ipokerit?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/ipokerit?ref=YOUR_TRACKING_CODE",
     img: "/images/ipokerit.png",
   },
   {
     name: "GGPoker",
-    href: "https://affiliate.example.com/ggpoker?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/ggpoker?ref=YOUR_TRACKING_CODE",
     img: "/images/ggpoker.png",
   },
   {
     name: "Unibet",
-    href: "https://affiliate.example.com/unibet?ref=YOUR_TRACKING_CODE",
+    href: "https://YOUR_AFFILIATE_DOMAIN/unibet?ref=YOUR_TRACKING_CODE",
     img: "/images/unibet.png",
   },
 ];
@@ -55,8 +55,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Poker Rewards NL Landing</title>
-        <meta name="description" content="Welcome to Poker Rewards NL" />
+        <title>Poker Rewards (NL)</title>
+        <meta
+          name="description"
+          content="Welcome to Poker Rewards – Netherlands"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
