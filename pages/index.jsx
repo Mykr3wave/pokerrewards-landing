@@ -35,12 +35,9 @@ export default function Home() {
               <br />
               KSA Licensed
             </p>
-            <a
-              href="#"
-              className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
-            >
+            <span className="bg-yellow-500 text-black font-bold py-2 px-4 rounded inline-block">
               Coming Soon
-            </a>
+            </span>
           </div>
 
           {/* Unibet Poker */}
@@ -59,12 +56,9 @@ export default function Home() {
               <br />
               KSA Licensed
             </p>
-            <a
-              href="#"
-              className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
-            >
+            <span className="bg-yellow-500 text-black font-bold py-2 px-4 rounded inline-block">
               Coming Soon
-            </a>
+            </span>
           </div>
 
           {/* Bet365 Poker */}
@@ -83,12 +77,9 @@ export default function Home() {
               <br />
               KSA Licensed
             </p>
-            <a
-              href="#"
-              className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
-            >
+            <span className="bg-yellow-500 text-black font-bold py-2 px-4 rounded inline-block">
               Coming Soon
-            </a>
+            </span>
           </div>
 
           {/* CoinPoker */}
@@ -111,7 +102,7 @@ export default function Home() {
               href="https://coinpoker.nl"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
+              className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded inline-block"
             >
               Play Now
             </a>
