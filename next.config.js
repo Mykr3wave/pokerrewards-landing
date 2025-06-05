@@ -1,8 +1,18 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cryptoleakv3.vercel.app', 'coinpoker.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cryptoleakv3.vercel.app',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'coinpoker.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
