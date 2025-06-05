@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-black text-white">
@@ -19,21 +17,9 @@ export default function Home() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* GG Poker */}
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">GG Poker</h2>
-            <Image
-              src="https://ggpoker.com/favicon.ico"
-              alt="GG Poker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-            />
-            <p className="mb-4">
-              €100 in rewards + Freeroll Tickets
-              <br />
-              KSA Licensed
-            </p>
+            <p className="mb-4">€100 in rewards + Freeroll Tickets<br />KSA Licensed</p>
             <a
               href="#"
               className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
@@ -42,21 +28,9 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Unibet Poker */}
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">Unibet Poker</h2>
-            <Image
-              src="https://www.unibet.eu/favicon.ico"
-              alt="Unibet Poker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-            />
-            <p className="mb-4">
-              €200 Bonus + Freeroll Tickets
-              <br />
-              KSA Licensed
-            </p>
+            <p className="mb-4">€200 Bonus + Freeroll Tickets<br />KSA Licensed</p>
             <a
               href="#"
               className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
@@ -65,21 +39,9 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Bet365 Poker */}
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">Bet365 Poker</h2>
-            <Image
-              src="https://www.bet365.com/favicon.ico"
-              alt="Bet365 Poker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-            />
-            <p className="mb-4">
-              €365 Bonus Offer
-              <br />
-              KSA Licensed
-            </p>
+            <p className="mb-4">€365 Bonus Offer<br />KSA Licensed</p>
             <a
               href="#"
               className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
@@ -88,25 +50,11 @@ export default function Home() {
             </a>
           </div>
 
-          {/* CoinPoker */}
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">CoinPoker</h2>
-            <Image
-              src="https://coinpoker.com/favicon.ico"
-              alt="CoinPoker logo"
-              width={64}
-              height={64}
-              className="mx-auto mb-4"
-            />
-            <p className="mb-4">
-              Crypto Poker with Rakeback
-              <br />
-              No KYC, Global Access
-            </p>
+            <p className="mb-4">Crypto Poker with Rakeback<br />No KYC, Global Access</p>
             <a
               href="https://coinpoker.nl"
-              target="_blank"
-              rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded"
             >
               Play Now
