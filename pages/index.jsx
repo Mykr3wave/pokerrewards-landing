@@ -23,7 +23,7 @@ export default function Home() {
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">GG Poker</h2>
             <Image
-              src="https://ggpoker.com/favicon.ico"
+              src="/ggpoker.png"
               alt="GG Poker logo"
               width={64}
               height={64}
@@ -47,7 +47,7 @@ export default function Home() {
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">Unibet Poker</h2>
             <Image
-              src="https://www.unibet.eu/favicon.ico"
+              src="/unibet.png"
               alt="Unibet Poker logo"
               width={64}
               height={64}
@@ -71,7 +71,7 @@ export default function Home() {
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">Bet365 Poker</h2>
             <Image
-              src="https://www.bet365.com/favicon.ico"
+              src="/bet365.png"
               alt="Bet365 Poker logo"
               width={64}
               height={64}
@@ -95,7 +95,7 @@ export default function Home() {
           <div className="border border-gray-700 p-6 rounded-xl bg-gray-900">
             <h2 className="text-2xl font-bold mb-2">CoinPoker</h2>
             <Image
-              src="https://coinpoker.com/favicon.ico"
+              src="/coinpoker.png"
               alt="CoinPoker logo"
               width={64}
               height={64}
