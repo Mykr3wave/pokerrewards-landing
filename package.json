@@ -1,64 +1,15 @@
-// pages/index.js
-
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css"; // Optional: if you have global CSS
-
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Poker Rewards Landing</title>
-        <meta name="description" content="Welcome to Poker Rewards" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-        <h1>Welcome to Poker Rewards</h1>
-        <p>Check out our partner sites below:</p>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "2rem",
-            alignItems: "center",
-            marginTop: "2rem",
-          }}
-        >
-          {/* GG Poker logo */}
-          <div style={{ textAlign: "center" }}>
-            <Image
-              src="/images/gg-poker.png"
-              alt="GG Poker Logo"
-              width={200}
-              height={100}
-            />
-            <p>GG Poker</p>
-          </div>
-
-          {/* Unibet logo */}
-          <div style={{ textAlign: "center" }}>
-            <Image
-              src="/images/unibet.png"
-              alt="Unibet Logo"
-              width={200}
-              height={100}
-            />
-            <p>Unibet</p>
-          </div>
-
-          {/* PokerStars logo */}
-          <div style={{ textAlign: "center" }}>
-            <Image
-              src="/images/pokerstars.png"
-              alt="PokerStars Logo"
-              width={200}
-              height={100}
-            />
-            <p>PokerStars</p>
-          </div>
-        </div>
-      </main>
-    </>
-  );
+{
+  "name": "pokerrewards-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "13.5.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
 }
