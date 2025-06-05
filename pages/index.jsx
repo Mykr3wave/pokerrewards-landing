@@ -1,109 +1,63 @@
+// pages/index.js
+
+import Head from "next/head";
 import Image from "next/image";
-import React from "react";
 
 export default function Home() {
-  const pokerSites = [
-    {
-      name: "CoinPoker",
-      logo: "/coinpoker.png",
-      description: "Crypto Poker Room with Rakeback, No KYC, Global Access",
-      rakeback: "35% Rakeback",
-      bonus: "Welcome Bonuses Available",
-      url: "https://coinpoker.nl",
-      actionText: "Join Now",
-      actionStyle: "bg-green-600 hover:bg-green-700 text-white",
-      isComingSoon: false,
-    },
-    {
-      name: "GG Poker",
-      logo: "/ggpoker.png",
-      description: "Up to $600 Bonus + Free Tournament Tickets (KSA Licensed)",
-      rakeback: "Up to 60%",
-      bonus: "$600 Bonus + Tickets",
-      actionText: "Coming Soon",
-      actionStyle: "bg-yellow-400 text-white cursor-default",
-      isComingSoon: true,
-    },
-    {
-      name: "Unibet Poker",
-      logo: "/unibet.png",
-      description: "€200 Bonus + Freeroll Tickets (KSA Licensed)",
-      rakeback: "Up to 35%",
-      bonus: "€200 Welcome Bonus",
-      actionText: "Coming Soon",
-      actionStyle: "bg-yellow-400 text-white cursor-default",
-      isComingSoon: true,
-    },
-    {
-      name: "Bet365 Poker",
-      logo: "/bet365.png",
-      description: "€365 Bonus Offer (KSA Licensed)",
-      rakeback: "Varies",
-      bonus: "€365 Bonus",
-      actionText: "Coming Soon",
-      actionStyle: "bg-yellow-400 text-white cursor-default",
-      isComingSoon: true,
-    },
-  ];
-
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-12">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-3xl font-bold mb-4">
-          🎁 Poker Bonuses for Dutch Players
-        </h1>
-        <p className="text-gray-600 mb-10">
-          Compare the best poker rakeback and welcome bonuses available for players in the Netherlands. 🇳🇱 KSA Licensed or Crypto Options.
-        </p>
+    <>
+      <Head>
+        <title>Poker Rewards Landing</title>
+        <meta name="description" content="Welcome to Poker Rewards" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-        <div className="grid gap-8">
-          {pokerSites.map((site) => (
-            <div
-              key={site.name}
-              className="bg-white rounded-xl shadow p-6 flex items-center justify-between"
-            >
-              <div className="flex items-center gap-4">
-                <Image
-                  src={site.logo}
-                  alt={`${site.name} logo`}
-                  width={64}
-                  height={64}
-                  className="object-contain"
-                />
-                <div className="text-left">
-                  <h2 className="text-xl font-semibold">{site.name}</h2>
-                  <p className="text-sm text-gray-500">{site.description}</p>
-                  <ul className="text-sm mt-2 text-gray-700">
-                    <li>
-                      <strong>Rakeback:</strong> {site.rakeback}
-                    </li>
-                    <li>
-                      <strong>Bonus:</strong> {site.bonus}
-                    </li>
-                  </ul>
-                </div>
-              </div>
+      <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+        <h1>Welcome to Poker Rewards</h1>
+        <p>Check out our partner sites below:</p>
 
-              {site.isComingSoon ? (
-                <span
-                  className={`${site.actionStyle} font-semibold px-4 py-2 rounded`}
-                >
-                  {site.actionText}
-                </span>
-              ) : (
-                <a
-                  href={site.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${site.actionStyle} font-semibold px-4 py-2 rounded`}
-                >
-                  {site.actionText}
-                </a>
-              )}
-            </div>
-          ))}
+        <div
+          style={{
+            display: "flex",
+            gap: "2rem",
+            alignItems: "center",
+            marginTop: "2rem",
+          }}
+        >
+          {/* GG Poker logo */}
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/gg-poker.png"
+              alt="GG Poker Logo"
+              width={200}
+              height={100}
+            />
+            <p>GG Poker</p>
+          </div>
+
+          {/* Unibet logo */}
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/unibet.png"
+              alt="Unibet Logo"
+              width={200}
+              height={100}
+            />
+            <p>Unibet</p>
+          </div>
+
+          {/* PokerStars logo */}
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pokerstars.png"
+              alt="PokerStars Logo"
+              width={200}
+              height={100}
+            />
+            <p>PokerStars</p>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
