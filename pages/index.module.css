@@ -1,63 +1,79 @@
-/* --- overall wrapper --- */
 .container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-/* --- headline + subtitle --- */
-.title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.subtitle {
-  text-align: center;
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-/* --- responsive grid --- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-}
-
-/* --- each card link --- */
-.card {
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 8px;
-  padding: 1rem;
-  transition: box-shadow 0.2s ease;
-  color: inherit;
+  min-height: 100vh;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.card:hover {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* --- logo container (fixed square) --- */
-.logoWrapper {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin-bottom: 1rem;
+.footer {
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* --- room name + info blocks --- */
-.roomName {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0.25rem;
-  text-align: center;
-}
-.info {
-  font-size: 0.9rem;
-  text-align: center;
+.title {
   margin: 0;
-  color: #333;
+  line-height: 1.15;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  border-color: #0070f3;
+  box-shadow: 0 4px 14px rgba(0, 118, 255, 0.2);
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
