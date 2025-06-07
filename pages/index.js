@@ -1,4 +1,3 @@
-// pages/index.js
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './index.module.css'
@@ -8,58 +7,58 @@ export default function Home() {
     {
       name: 'TigerGaming',
       logo: '/images/tigergaming.png',
-      url: 'https://tigergaming.nl/?ref=YOURCODE',
+      link: 'https://tigergaming.com',
       bonus: '100% up to $1,000',
-      rakeback: 'VIP',
+      rakeback: 'VIP'
     },
     {
       name: 'WPT Global',
       logo: '/images/wptglobal.png',
-      url: 'https://wptglobal.com/?ref=YOURCODE',
+      link: 'https://wptglobal.com',
       bonus: '100% up to $3,000',
-      rakeback: 'VIP',
+      rakeback: 'VIP'
     },
     {
       name: 'CoinPoker',
       logo: '/images/coinpoker.png',
-      url: 'https://coinpoker.nl/?ref=YOURCODE',
+      link: 'https://coinpoker.nl',
       bonus: '150% up to $2,000',
-      rakeback: '33%+',
+      rakeback: '33%+'
     },
     {
       name: '4Poker',
       logo: '/images/4poker.png',
-      url: 'https://4poker.com/?ref=YOURCODE',
+      link: 'https://4poker.com',
       bonus: '400% up to $1,000',
-      rakeback: 'Up to 50%',
+      rakeback: 'Up to 50%'
     },
     {
       name: 'Phenom Poker',
       logo: '/images/phenompoker.png',
-      url: 'https://play.phenompoker.com/register?r=2I3JPR',
-      bonus: '100% up to €500',
-      rakeback: 'VIP',
+      link: 'https://play.phenompoker.com/register?r=2I3JPR',
+      bonus: '—',
+      rakeback: '—'
     },
     {
       name: 'iPoker.it Italy',
       logo: '/images/ipokerit.png',
-      url: 'https://ipoker.it/?ref=YOURCODE',
-      bonus: '50% up to €1,000',
-      rakeback: 'VIP',
+      link: 'https://ipoker.it',
+      bonus: '—',
+      rakeback: '—'
     },
     {
       name: 'GGPoker',
       logo: '/images/ggpoker.png',
-      url: 'https://ggpoker.eu/?ref=YOURCODE',
-      bonus: '200% up to $1,000',
-      rakeback: '25%',
+      link: 'https://ggpoker.com',
+      bonus: '—',
+      rakeback: '—'
     },
     {
       name: 'Unibet',
       logo: '/images/unibet.png',
-      url: 'https://unibet.com/poker?partner=YOURCODE',
-      bonus: '100% up to €500',
-      rakeback: 'VIP',
+      link: 'https://unibet.com',
+      bonus: '—',
+      rakeback: '—'
     },
   ]
 
@@ -67,20 +66,20 @@ export default function Home() {
     <>
       <Head>
         <title>Poker Rewards (NL)</title>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="description" content="Ranked list of poker sites" />
       </Head>
 
-      <main className={styles.container}>
+      <div className={styles.container}>
         <h1 className={styles.title}>Welcome to Poker Rewards (NL)</h1>
-        <p className={styles.subtitle}>
-          Click any logo below to visit our partner’s site:
+        <p className={styles.intro}>
+          Click any logo below to visit our partner’s site and see their bonus/rakeback.
         </p>
 
         <div className={styles.grid}>
-          {rooms.map((room) => (
+          {rooms.map((room, i) => (
             <a
-              key={room.name}
-              href={room.url}
+              key={i}
+              href={room.link}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.card}
@@ -94,14 +93,12 @@ export default function Home() {
                 />
               </div>
               <h2 className={styles.roomName}>{room.name}</h2>
-              <div className={styles.info}>
-                <span>Bonus: {room.bonus}</span>
-                <span>Rakeback: {room.rakeback}</span>
-              </div>
+              <p className={styles.bonus}>Bonus: {room.bonus}</p>
+              <p className={styles.rakeback}>Rakeback: {room.rakeback}</p>
             </a>
           ))}
         </div>
-      </main>
+      </div>
     </>
   )
 }
