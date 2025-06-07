@@ -1,58 +1,67 @@
+/* container for page */
 .container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
+/* main title */
 .title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
+/* subtitle text */
 .subtitle {
   text-align: center;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
   color: #555;
 }
 
+/* grid layout for cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
+/* each card link */
 .card {
+  display: block;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 8px;
   padding: 1rem;
-  transition: box-shadow .2s ease;
+  transition: box-shadow 0.2s ease;
   color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
+/* hover state */
 .card:hover {
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
+/* wrapper to fix logo size */
 .logoWrapper {
   width: 200px;
   height: 200px;
+  margin: 0 auto 1rem;
   position: relative;
-  margin-bottom: 1rem;
 }
 
+/* room name below logo */
 .roomName {
+  text-align: center;
   font-size: 1.25rem;
   margin: 0.5rem 0;
-  text-align: center;
 }
 
+/* bonus and rakeback text */
 .info {
-  margin: 0.25rem 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
   color: #333;
 }
