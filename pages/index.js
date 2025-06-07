@@ -5,82 +5,92 @@ import styles from './index.module.css'
 export default function Home() {
   const rooms = [
     {
+      rank: 1,
       name: 'TigerGaming',
-      href: 'https://tigergaming.com/your-referral',
       logo: '/images/tigergaming.png',
+      href: 'https://tigergaming.com',
       bonus: '100% up to $1,000',
       rakeback: 'VIP'
     },
     {
+      rank: 2,
       name: 'WPT Global',
-      href: 'https://wptglobal.com/your-referral',
       logo: '/images/wptglobal.png',
+      href: 'https://wptglobal.com',
       bonus: '100% up to $3,000',
       rakeback: 'VIP'
     },
     {
+      rank: 3,
       name: 'CoinPoker',
-      href: 'https://coinpoker.nl/',
       logo: '/images/coinpoker.png',
+      href: 'https://coinpoker.nl',
       bonus: '150% up to $2,000',
-      rakeback: '33%+'
+      rakeback: '33%'
     },
     {
+      rank: 4,
       name: '4Poker',
-      href: 'https://4poker.com/your-referral',
       logo: '/images/4poker.png',
+      href: 'https://4poker.com',
       bonus: '400% up to $1,000',
       rakeback: 'Up to 50%'
     },
     {
+      rank: 5,
       name: 'Phenom Poker',
-      href: 'https://play.phenompoker.com/register?r=2I3JPR',
       logo: '/images/phenompoker.png',
-      bonus: '100% up to $2,500',
-      rakeback: 'Up to 35%'
+      href: 'https://play.phenompoker.com/register?r=2I3JPR',
+      bonus: '100% up to $1,500',
+      rakeback: '30%'
     },
     {
+      rank: 6,
       name: 'iPoker.it Italy',
-      href: 'https://ipoker.it/your-referral',
       logo: '/images/ipokerit.png',
-      bonus: '100% up to €1,000',
+      href: 'https://ipoker.it',
+      bonus: '100% up to €500',
       rakeback: 'VIP'
     },
     {
+      rank: 7,
       name: 'GGPoker',
-      href: 'https://ggpoker.com/your-referral',
       logo: '/images/ggpoker.png',
+      href: 'https://ggpoker.com',
       bonus: '200% up to $600',
-      rakeback: '25%+'
+      rakeback: '30%'
     },
     {
+      rank: 8,
       name: 'Unibet',
-      href: 'https://unibet.com/your-referral',
       logo: '/images/unibet.png',
+      href: 'https://unibet.com',
       bonus: '100% up to €500',
-      rakeback: 'Levels up to 42%'
+      rakeback: 'VIP'
     }
   ]
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Welcome to Poker Rewards (NL)</title>
-        <meta name="description" content="Top poker sites ranked and reviewed, with bonuses & rakeback." />
+        <title>Poker Rewards (NL)</title>
       </Head>
 
-      <h1>Welcome to Poker Rewards (NL)</h1>
-      <p>Click any logo below to visit our partner’s site:</p>
+      <h1 className={styles.heading}>Welcome to Poker Rewards (NL)</h1>
+      <p className={styles.subheading}>
+        Click any logo below to visit our partner’s site:
+      </p>
 
       <div className={styles.grid}>
         {rooms.map(room => (
           <a
-            key={room.name}
+            key={room.rank}
             href={room.href}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.card}
           >
+            <div className={styles.rank}>#{room.rank}</div>
             <div className={styles.logoWrapper}>
               <Image
                 src={room.logo}
@@ -89,9 +99,11 @@ export default function Home() {
                 objectFit="contain"
               />
             </div>
-            <h2>{room.name}</h2>
-            <p><strong>Bonus:</strong> {room.bonus}</p>
-            <p><strong>Rakeback:</strong> {room.rakeback}</p>
+            <h2 className={styles.title}>{room.name}</h2>
+            <div className={styles.info}>
+              <span className={styles.bonus}>🔹 Bonus: {room.bonus}</span>
+              <span className={styles.rakeback}>↻ Rakeback: {room.rakeback}</span>
+            </div>
           </a>
         ))}
       </div>
