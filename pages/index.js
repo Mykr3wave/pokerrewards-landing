@@ -1,3 +1,4 @@
+// pages/index.js
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './index.module.css'
@@ -7,28 +8,28 @@ export default function Home() {
     {
       name: 'TigerGaming',
       logo: '/images/tigergaming.png',
-      url: 'https://tiger.gaming/your-affiliate-code',
+      url: 'https://tigergaming.nl/?ref=YOURCODE',
       bonus: '100% up to $1,000',
       rakeback: 'VIP',
     },
     {
       name: 'WPT Global',
       logo: '/images/wptglobal.png',
-      url: 'https://wptglobal.com/your-affiliate-code',
+      url: 'https://wptglobal.com/?ref=YOURCODE',
       bonus: '100% up to $3,000',
       rakeback: 'VIP',
     },
     {
       name: 'CoinPoker',
       logo: '/images/coinpoker.png',
-      url: 'https://coinpoker.nl',
+      url: 'https://coinpoker.nl/?ref=YOURCODE',
       bonus: '150% up to $2,000',
       rakeback: '33%+',
     },
     {
       name: '4Poker',
       logo: '/images/4poker.png',
-      url: 'https://4poker.com/your-affiliate-code',
+      url: 'https://4poker.com/?ref=YOURCODE',
       bonus: '400% up to $1,000',
       rakeback: 'Up to 50%',
     },
@@ -36,29 +37,29 @@ export default function Home() {
       name: 'Phenom Poker',
       logo: '/images/phenompoker.png',
       url: 'https://play.phenompoker.com/register?r=2I3JPR',
-      bonus: '–',
-      rakeback: '–',
+      bonus: '100% up to €500',
+      rakeback: 'VIP',
     },
     {
       name: 'iPoker.it Italy',
       logo: '/images/ipokerit.png',
-      url: 'https://ipoker.it/your-affiliate-code',
-      bonus: '–',
-      rakeback: '–',
+      url: 'https://ipoker.it/?ref=YOURCODE',
+      bonus: '50% up to €1,000',
+      rakeback: 'VIP',
     },
     {
       name: 'GGPoker',
       logo: '/images/ggpoker.png',
-      url: 'https://ggpoker.com/your-affiliate-code',
-      bonus: '–',
-      rakeback: '–',
+      url: 'https://ggpoker.eu/?ref=YOURCODE',
+      bonus: '200% up to $1,000',
+      rakeback: '25%',
     },
     {
       name: 'Unibet',
       logo: '/images/unibet.png',
-      url: 'https://unibet.com/your-affiliate-code',
-      bonus: '–',
-      rakeback: '–',
+      url: 'https://unibet.com/poker?partner=YOURCODE',
+      bonus: '100% up to €500',
+      rakeback: 'VIP',
     },
   ]
 
@@ -66,7 +67,9 @@ export default function Home() {
     <>
       <Head>
         <title>Poker Rewards (NL)</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
+
       <main className={styles.container}>
         <h1 className={styles.title}>Welcome to Poker Rewards (NL)</h1>
         <p className={styles.subtitle}>
@@ -86,8 +89,7 @@ export default function Home() {
                 <Image
                   src={room.logo}
                   alt={room.name}
-                  width={200}
-                  height={200}
+                  layout="fill"
                   objectFit="contain"
                 />
               </div>
