@@ -1,48 +1,112 @@
-import Head from 'next/head';
-import styles from './index.module.css';
+// pages/index.js
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from './index.module.css'
 
 export default function Home() {
+  const rooms = [
+    {
+      rank: 1,
+      name: 'TigerGaming',
+      logo: '/images/tigergaming.png',
+      href: 'https://affiliate-link-for-tigergaming.com',
+      depositBonus: '100% up to $1 000',
+      maxRakeback: 'VIP',
+    },
+    {
+      rank: 2,
+      name: 'WPT Global',
+      logo: '/images/wptglobal.png',
+      href: 'https://affiliate-link-for-wptglobal.com',
+      depositBonus: '100% up to $3 000',
+      maxRakeback: 'VIP',
+    },
+    {
+      rank: 3,
+      name: 'CoinPoker',
+      logo: '/images/coinpoker.png',
+      href: 'https://coinpoker.nl',
+      depositBonus: '150% up to $2 000',
+      maxRakeback: '33%+',
+    },
+    {
+      rank: 4,
+      name: '4Poker',
+      logo: '/images/4poker.png',
+      href: 'https://affiliate-link-for-4poker.com',
+      depositBonus: '400% up to $1 000',
+      maxRakeback: '50%',
+    },
+    {
+      rank: 5,
+      name: 'Phenom Poker',
+      logo: '/images/phenompoker.png',
+      href: 'https://play.phenompoker.com/register?r=2I3JPR',
+      depositBonus: '150% up to $3 000',
+      maxRakeback: '35%',
+    },
+    {
+      rank: 6,
+      name: 'iPoker.it Italy',
+      logo: '/images/ipokerit.png',
+      href: 'https://affiliate-link-for-ipokerit.com',
+      depositBonus: '€200',
+      maxRakeback: '35%',
+    },
+    {
+      rank: 7,
+      name: 'GGPoker',
+      logo: '/images/ggpoker.png',
+      href: 'https://affiliate-link-for-ggpoker.com',
+      depositBonus: '100% up to $600',
+      maxRakeback: '60%',
+    },
+    {
+      rank: 8,
+      name: 'Unibet',
+      logo: '/images/unibet.png',
+      href: 'https://affiliate-link-for-unibet.com',
+      depositBonus: '€200',
+      maxRakeback: '65%',
+    },
+  ]
+
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>PokerRewards - Best Poker Bonuses 2025</title>
-        <meta name="description" content="Claim the best online poker bonuses and rewards in 2025. Compare offers and start playing smarter." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Poker Rewards (NL)</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to PokerRewards</h1>
-        <p className={styles.description}>
-          Discover the top poker bonuses and promotions available in 2025.
-        </p>
+      <main className={styles.container}>
+        <h1>Welcome to Poker Rewards (NL)</h1>
+        <p>Click any logo below to visit our partner’s site:</p>
 
         <div className={styles.grid}>
-          <a href="https://ggpoker.com/promotions/welcome-bonus/" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>GGPoker &rarr;</h2>
-            <p>Up to $100 in rewards or a matched deposit bonus. No code needed.</p>
-          </a>
-
-          <a href="https://www.pokernews.com/online-poker-bonuses.htm" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>PokerNews &rarr;</h2>
-            <p>Latest bonus codes and no deposit offers for top poker sites.</p>
-          </a>
-
-          <a href="https://worldpokerdeals.com/blog/betonline-poker-bonus-code" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>BetOnline &rarr;</h2>
-            <p>100% poker welcome bonus up to $1,000 with code POKER1000.</p>
-          </a>
-
-          <a href="https://www.hollandcasino.nl/promoties/poker-welcome-offer" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>Holland Casino &rarr;</h2>
-            <p>Receive up to €250 bonus or a welcome package worth €100.</p>
-          </a>
+          {rooms.map(room => (
+            <a
+              key={room.rank}
+              href={room.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.card}
+            >
+              <div className={styles.logoWrapper}>
+                <Image
+                  src={room.logo}
+                  alt={room.name}
+                  width={200}
+                  height={200}
+                />
+              </div>
+              <h2>
+                #{room.rank} {room.name}
+              </h2>
+              <p><strong>First Deposit Bonus:</strong> {room.depositBonus}</p>
+              <p><strong>Max Rakeback:</strong> {room.maxRakeback}</p>
+            </a>
+          ))}
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <p>&copy; 2025 PokerRewards. All rights reserved.</p>
-      </footer>
-    </div>
-  );
+    </>
+  )
 }
