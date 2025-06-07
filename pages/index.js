@@ -1,16 +1,49 @@
+// pages/index.js
 import Head from 'next/head'
 import React from 'react'
 
 export default function Home() {
   const rooms = [
-    { name: 'TigerGaming',    img: '/images/tigergaming.png',  url: 'https://tiger-gaming-affiliate-link.example.com' },
-    { name: 'WPT Global',     img: '/images/wptglobal.png',    url: 'https://wpt-global-affiliate-link.example.com' },
-    { name: 'CoinPoker',      img: '/images/coinpoker.png',     url: 'https://coinpoker-affiliate-link.example.com' },
-    { name: '4Poker',         img: '/images/4poker.png',        url: 'https://4poker-affiliate-link.example.com' },
-    { name: 'Phenom Poker',   img: '/images/phenompoker.png',   url: 'https://phenompoker-affiliate-link.example.com' },
-    { name: 'iPoker.it Italy',img: '/images/ipokerit.png',      url: 'https://ipokerit-affiliate-link.example.com' },
-    { name: 'GGPoker',        img: '/images/ggpoker.png',       url: 'https://ggpoker-affiliate-link.example.com' },
-    { name: 'Unibet',         img: '/images/unibet.png',        url: 'https://unibet-affiliate-link.example.com' },
+    {
+      name: 'TigerGaming',
+      img: '/images/tigergaming.png',
+      url: 'https://tiger-gaming.com/?r=YOUR_AFFILIATE_CODE'
+    },
+    {
+      name: 'WPT Global',
+      img: '/images/wptglobal.png',
+      url: 'https://wptglobal.com/?r=YOUR_AFFILIATE_CODE'
+    },
+    {
+      name: 'CoinPoker',
+      img: '/images/coinpoker.png',
+      url: 'https://coinpoker.nl'
+    },
+    {
+      name: '4Poker',
+      img: '/images/4poker.png',
+      url: 'https://4poker.com/?r=YOUR_AFFILIATE_CODE'
+    },
+    {
+      name: 'Phenom Poker',
+      img: '/images/phenompoker.png',
+      url: 'https://play.phenompoker.com/register?r=2I3JPR'
+    },
+    {
+      name: 'iPoker.it Italy',
+      img: '/images/ipokerit.png',
+      url: 'https://ipoker.it/?r=YOUR_AFFILIATE_CODE'
+    },
+    {
+      name: 'GGPoker',
+      img: '/images/ggpoker.png',
+      url: 'https://ggpoker.com/?r=YOUR_AFFILIATE_CODE'
+    },
+    {
+      name: 'Unibet',
+      img: '/images/unibet.png',
+      url: 'https://unibet.com/?r=YOUR_AFFILIATE_CODE'
+    },
   ]
 
   return (
@@ -28,7 +61,7 @@ export default function Home() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
             gap: '2rem',
             alignItems: 'center',
-            marginTop: '2rem'
+            marginTop: '2rem',
           }}
         >
           {rooms.map((room) => (
@@ -37,14 +70,25 @@ export default function Home() {
               href={room.url}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ textAlign: 'center', textDecoration: 'none', color: 'inherit' }}
+              style={{
+                textAlign: 'center',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
             >
               <img
                 src={room.img}
                 alt={room.name}
-                style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 2px 6px rgba(0,0,0,0.1)' }}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                  borderRadius: '8px',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                }}
               />
-              <div style={{ marginTop: '0.5rem', fontWeight: '500' }}>{room.name}</div>
+              <div style={{ marginTop: '0.5rem', fontWeight: 500 }}>
+                {room.name}
+              </div>
             </a>
           ))}
         </div>
