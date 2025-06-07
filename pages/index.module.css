@@ -1,14 +1,14 @@
-/* layout */
+/* pages/index.module.css */
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-/* typography */
 .heading {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -19,66 +19,41 @@
   color: #555;
 }
 
-/* grid of cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-/* each card */
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-decoration: none;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #eaeaea;
   border-radius: 8px;
   padding: 1rem;
-  transition: box-shadow .2s ease;
+  transition: box-shadow 0.2s ease;
   color: inherit;
-  background: #fff;
 }
 
 .card:hover {
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-/* rank badge */
-.rank {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-/* logo container (fixed square) */
 .logoWrapper {
   position: relative;
-  width: 120px;
-  height: 120px;
-  margin-bottom: 0.75rem;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
 }
 
-/* room title */
 .title {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
   text-align: center;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
 }
 
-/* bonus & rakeback info */
 .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  margin-top: 0.5rem;
   font-size: 0.9rem;
-}
-
-.bonus {
-  color: #0070f3;
-}
-
-.rakeback {
-  color: #e91e63;
+  line-height: 1.4;
+  color: #333;
+  text-align: center;
 }
