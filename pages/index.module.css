@@ -1,18 +1,18 @@
-/* container for page */
+/* page wrapper */
 .container {
   max-width: 1024px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-/* main title */
+/* main heading */
 .title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* subtitle text */
+/* subheading text */
 .subtitle {
   text-align: center;
   font-size: 1.25rem;
@@ -20,14 +20,14 @@
   color: #555;
 }
 
-/* grid layout for cards */
+/* grid of cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-/* each card link */
+/* individual card */
 .card {
   display: block;
   text-decoration: none;
@@ -37,13 +37,11 @@
   transition: box-shadow 0.2s ease;
   color: inherit;
 }
-
-/* hover state */
 .card:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-/* wrapper to fix logo size */
+/* logo container */
 .logoWrapper {
   width: 200px;
   height: 200px;
@@ -51,14 +49,14 @@
   position: relative;
 }
 
-/* room name below logo */
+/* room name */
 .roomName {
   text-align: center;
   font-size: 1.25rem;
   margin: 0.5rem 0;
 }
 
-/* bonus and rakeback text */
+/* bonus & rakeback info */
 .info {
   display: flex;
   justify-content: space-between;
