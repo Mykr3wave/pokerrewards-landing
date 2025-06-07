@@ -1,78 +1,48 @@
-// pages/index.js
-
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import styles from './index.module.css';
 
 export default function Home() {
-  const rooms = [
-    { name: 'TigerGaming', logo: '/images/tigergaming.png', href: 'https://tigergaming.nl', bonus: '100% up to $1,000', rakeback: 'VIP' },
-    { name: 'WPT Global', logo: '/images/wptglobal.png', href: 'https://wptglobal.com', bonus: '100% up to $3,000', rakeback: 'VIP' },
-    { name: 'CoinPoker', logo: '/images/coinpoker.png', href: 'https://coinpoker.nl', bonus: '150% up to $2,000', rakeback: '33%+' },
-    { name: '4Poker', logo: '/images/4poker.png', href: 'https://4poker.com', bonus: '400% up to $1,000', rakeback: 'Up to 50%' },
-    { name: 'Phenom Poker', logo: '/images/phenompoker.png', href: 'https://play.phenompoker.com/register?r=2I3JPR', bonus: '–', rakeback: '–' },
-    { name: 'iPoker.it Italy', logo: '/images/ipokerit.png', href: 'https://ipoker.it', bonus: '–', rakeback: '–' },
-    { name: 'GGPoker', logo: '/images/ggpoker.png', href: 'https://ggpoker.com', bonus: '–', rakeback: '–' },
-    { name: 'Unibet', logo: '/images/unibet.png', href: 'https://unibet.nl', bonus: '–', rakeback: '–' }
-  ]
-
   return (
-    <>
+    <div className={styles.container}>
       <Head>
-        <title>Poker Rewards (NL)</title>
-        <meta name="description" content="Click any logo to visit our partner’s site" />
+        <title>PokerRewards - Best Poker Bonuses 2025</title>
+        <meta name="description" content="Claim the best online poker bonuses and rewards in 2025. Compare offers and start playing smarter." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main style={{ maxWidth: 1024, margin: '0 auto', padding: '2rem 1rem' }}>
-        <h1 style={{ textAlign: 'center', marginBottom: '1rem' }}>
-          Welcome to Poker Rewards (NL)
-        </h1>
-        <p style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          Click any logo below to visit our partner’s site:
+      <main className={styles.main}>
+        <h1 className={styles.title}>Welcome to PokerRewards</h1>
+        <p className={styles.description}>
+          Discover the top poker bonuses and promotions available in 2025.
         </p>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '1.5rem'
-          }}
-        >
-          {rooms.map((room) => (
-            <a
-              key={room.name}
-              href={room.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'block',
-                textDecoration: 'none',
-                border: '1px solid #eaeaea',
-                borderRadius: 8,
-                padding: '1rem',
-                textAlign: 'center',
-                transition: 'box-shadow .2s ease'
-              }}
-            >
-              <div style={{ marginBottom: '0.5rem' }}>
-                <Image
-                  src={room.logo}
-                  alt={room.name}
-                  width={160}
-                  height={160}
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-              <h2 style={{ margin: '0.5rem 0 0', fontSize: '1rem' }}>{room.name}</h2>
-              <p style={{ margin: '0.25rem 0', fontSize: '0.9rem' }}>
-                Bonus: {room.bonus}
-              </p>
-              <p style={{ margin: '0', fontSize: '0.9rem' }}>
-                Rakeback: {room.rakeback}
-              </p>
-            </a>
-          ))}
+        <div className={styles.grid}>
+          <a href="https://ggpoker.com/promotions/welcome-bonus/" className={styles.card} target="_blank" rel="noopener noreferrer">
+            <h2>GGPoker &rarr;</h2>
+            <p>Up to $100 in rewards or a matched deposit bonus. No code needed.</p>
+          </a>
+
+          <a href="https://www.pokernews.com/online-poker-bonuses.htm" className={styles.card} target="_blank" rel="noopener noreferrer">
+            <h2>PokerNews &rarr;</h2>
+            <p>Latest bonus codes and no deposit offers for top poker sites.</p>
+          </a>
+
+          <a href="https://worldpokerdeals.com/blog/betonline-poker-bonus-code" className={styles.card} target="_blank" rel="noopener noreferrer">
+            <h2>BetOnline &rarr;</h2>
+            <p>100% poker welcome bonus up to $1,000 with code POKER1000.</p>
+          </a>
+
+          <a href="https://www.hollandcasino.nl/promoties/poker-welcome-offer" className={styles.card} target="_blank" rel="noopener noreferrer">
+            <h2>Holland Casino &rarr;</h2>
+            <p>Receive up to €250 bonus or a welcome package worth €100.</p>
+          </a>
         </div>
       </main>
-    </>
-  )
+
+      <footer className={styles.footer}>
+        <p>&copy; 2025 PokerRewards. All rights reserved.</p>
+      </footer>
+    </div>
+  );
 }
