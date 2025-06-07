@@ -1,116 +1,112 @@
 // pages/index.js
-import Link from 'next/link'
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from './index.module.css'
 
 export default function Home() {
-  const partners = [
+  const rooms = [
     {
+      rank: 1,
       name: 'TigerGaming',
       logo: '/images/tigergaming.png',
-      url: 'https://tigergaming.com/?r=YOURCODE'
+      href: 'https://affiliate-link-for-tigergaming.com',
+      depositBonus: '100% up to $1 000',
+      maxRakeback: 'VIP',
     },
     {
+      rank: 2,
       name: 'WPT Global',
       logo: '/images/wptglobal.png',
-      url: 'https://wptglobal.com/?r=YOURCODE'
+      href: 'https://affiliate-link-for-wptglobal.com',
+      depositBonus: '100% up to $3 000',
+      maxRakeback: 'VIP',
     },
     {
+      rank: 3,
       name: 'CoinPoker',
       logo: '/images/coinpoker.png',
-      url: 'https://coinpoker.nl/?r=YOURCODE'
+      href: 'https://coinpoker.nl',
+      depositBonus: '150% up to $2 000',
+      maxRakeback: '33%+',
     },
     {
+      rank: 4,
       name: '4Poker',
       logo: '/images/4poker.png',
-      url: 'https://4poker.com/?r=YOURCODE'
+      href: 'https://affiliate-link-for-4poker.com',
+      depositBonus: '400% up to $1 000',
+      maxRakeback: '50%',
     },
     {
+      rank: 5,
       name: 'Phenom Poker',
       logo: '/images/phenompoker.png',
-      url: 'https://play.phenompoker.com/register?r=2I3JPR'
+      href: 'https://play.phenompoker.com/register?r=2I3JPR',
+      depositBonus: '150% up to $3 000',
+      maxRakeback: '35%',
     },
     {
+      rank: 6,
       name: 'iPoker.it Italy',
       logo: '/images/ipokerit.png',
-      url: 'https://ipoker.it/?r=YOURCODE'
+      href: 'https://affiliate-link-for-ipokerit.com',
+      depositBonus: '€200',
+      maxRakeback: '35%',
     },
     {
-      name: 'Unibet',
-      logo: '/images/unibet.png',
-      url: 'https://unibet.nl/poker/?r=YOURCODE'
-    },
-    {
+      rank: 7,
       name: 'GGPoker',
       logo: '/images/ggpoker.png',
-      url: 'https://ggpoker.com/?r=YOURCODE'
+      href: 'https://affiliate-link-for-ggpoker.com',
+      depositBonus: '100% up to $600',
+      maxRakeback: '60%',
+    },
+    {
+      rank: 8,
+      name: 'Unibet',
+      logo: '/images/unibet.png',
+      href: 'https://affiliate-link-for-unibet.com',
+      depositBonus: '€200',
+      maxRakeback: '65%',
     },
   ]
 
   return (
-    <div className="container">
-      <h1>Welcome to Poker Rewards (NL)</h1>
-      <p className="subtitle">Click any logo below to visit our partner’s site:</p>
+    <>
+      <Head>
+        <title>Poker Rewards (NL)</title>
+      </Head>
 
-      <div className="grid">
-        {partners.map((p) => (
-          <Link key={p.name} href={p.url} passHref>
-            <a className="card" target="_blank" rel="noopener noreferrer">
-              <img src={p.logo} alt={p.name} />
-              <div className="label">{p.name}</div>
+      <main className={styles.container}>
+        <h1>Welcome to Poker Rewards (NL)</h1>
+        <p>Click any logo below to visit our partner’s site:</p>
+
+        <div className={styles.grid}>
+          {rooms.map(room => (
+            <a
+              key={room.rank}
+              href={room.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.card}
+            >
+              <div className={styles.logoWrapper}>
+                <Image
+                  src={room.logo}
+                  alt={room.name}
+                  width={200}
+                  height={200}
+                />
+              </div>
+              <h2>
+                #{room.rank} {room.name}
+              </h2>
+              <p><strong>First Deposit Bonus:</strong> {room.depositBonus}</p>
+              <p><strong>Max Rakeback:</strong> {room.maxRakeback}</p>
             </a>
-          </Link>
-        ))}
-      </div>
-
-      <style jsx>{`
-        .container {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 40px 20px;
-          background: #f3f4f6;
-          min-height: 100vh;
-          font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        h1 {
-          text-align: center;
-          margin-bottom: 8px;
-        }
-        .subtitle {
-          text-align: center;
-          margin-bottom: 32px;
-          color: #555;
-        }
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-          gap: 24px;
-        }
-        .card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background: #fff;
-          border-radius: 8px;
-          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-          padding: 16px;
-          text-decoration: none;
-          color: inherit;
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .card img {
-          max-width: 100%;
-          max-height: 100px;
-          object-fit: contain;
-          margin-bottom: 12px;
-        }
-        .label {
-          margin-top: auto;
-          font-weight: 500;
-        }
-      `}</style>
-    </div>
+          ))}
+        </div>
+      </main>
+    </>
   )
 }
