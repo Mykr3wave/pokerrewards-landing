@@ -1,98 +1,116 @@
 // pages/index.js
-import Head from 'next/head'
-import React from 'react'
+import Link from 'next/link'
 
 export default function Home() {
-  const rooms = [
+  const partners = [
     {
       name: 'TigerGaming',
-      img: '/images/tigergaming.png',
-      url: 'https://tiger-gaming.com/?r=YOUR_AFFILIATE_CODE'
+      logo: '/images/tigergaming.png',
+      url: 'https://tigergaming.com/?r=YOURCODE'
     },
     {
       name: 'WPT Global',
-      img: '/images/wptglobal.png',
-      url: 'https://wptglobal.com/?r=YOUR_AFFILIATE_CODE'
+      logo: '/images/wptglobal.png',
+      url: 'https://wptglobal.com/?r=YOURCODE'
     },
     {
       name: 'CoinPoker',
-      img: '/images/coinpoker.png',
-      url: 'https://coinpoker.nl'
+      logo: '/images/coinpoker.png',
+      url: 'https://coinpoker.nl/?r=YOURCODE'
     },
     {
       name: '4Poker',
-      img: '/images/4poker.png',
-      url: 'https://4poker.com/?r=YOUR_AFFILIATE_CODE'
+      logo: '/images/4poker.png',
+      url: 'https://4poker.com/?r=YOURCODE'
     },
     {
       name: 'Phenom Poker',
-      img: '/images/phenompoker.png',
+      logo: '/images/phenompoker.png',
       url: 'https://play.phenompoker.com/register?r=2I3JPR'
     },
     {
       name: 'iPoker.it Italy',
-      img: '/images/ipokerit.png',
-      url: 'https://ipoker.it/?r=YOUR_AFFILIATE_CODE'
-    },
-    {
-      name: 'GGPoker',
-      img: '/images/ggpoker.png',
-      url: 'https://ggpoker.com/?r=YOUR_AFFILIATE_CODE'
+      logo: '/images/ipokerit.png',
+      url: 'https://ipoker.it/?r=YOURCODE'
     },
     {
       name: 'Unibet',
-      img: '/images/unibet.png',
-      url: 'https://unibet.com/?r=YOUR_AFFILIATE_CODE'
+      logo: '/images/unibet.png',
+      url: 'https://unibet.nl/poker/?r=YOURCODE'
+    },
+    {
+      name: 'GGPoker',
+      logo: '/images/ggpoker.png',
+      url: 'https://ggpoker.com/?r=YOURCODE'
     },
   ]
 
   return (
-    <>
-      <Head>
-        <title>Poker Rewards (NL)</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-        <h1>Welcome to Poker Rewards (NL)</h1>
-        <p>Click any logo below to visit our partner’s site:</p>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-            gap: '2rem',
-            alignItems: 'center',
-            marginTop: '2rem',
-          }}
-        >
-          {rooms.map((room) => (
-            <a
-              key={room.name}
-              href={room.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                textAlign: 'center',
-                textDecoration: 'none',
-                color: 'inherit',
-              }}
-            >
-              <img
-                src={room.img}
-                alt={room.name}
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  borderRadius: '8px',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-                }}
-              />
-              <div style={{ marginTop: '0.5rem', fontWeight: 500 }}>
-                {room.name}
-              </div>
+    <div className="container">
+      <h1>Welcome to Poker Rewards (NL)</h1>
+      <p className="subtitle">Click any logo below to visit our partner’s site:</p>
+
+      <div className="grid">
+        {partners.map((p) => (
+          <Link key={p.name} href={p.url} passHref>
+            <a className="card" target="_blank" rel="noopener noreferrer">
+              <img src={p.logo} alt={p.name} />
+              <div className="label">{p.name}</div>
             </a>
-          ))}
-        </div>
-      </main>
-    </>
+          </Link>
+        ))}
+      </div>
+
+      <style jsx>{`
+        .container {
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          background: #f3f4f6;
+          min-height: 100vh;
+          font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        h1 {
+          text-align: center;
+          margin-bottom: 8px;
+        }
+        .subtitle {
+          text-align: center;
+          margin-bottom: 32px;
+          color: #555;
+        }
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 24px;
+        }
+        .card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+          padding: 16px;
+          text-decoration: none;
+          color: inherit;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .card img {
+          max-width: 100%;
+          max-height: 100px;
+          object-fit: contain;
+          margin-bottom: 12px;
+        }
+        .label {
+          margin-top: auto;
+          font-weight: 500;
+        }
+      `}</style>
+    </div>
   )
 }
