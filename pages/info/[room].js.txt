@@ -1,0 +1,92 @@
+// pages/info/[room].js
+import { useRouter } from 'next/router'
+
+const roomContent = {
+  tigergaming: {
+    name: 'TigerGaming',
+    text: `
+TigerGaming is a top online poker room known for soft games and good bonuses. 
+Rakeback is available via VIP deals. Fast cashouts and good traffic for NLHE and PLO.
+    `
+  },
+  wptglobal: {
+    name: 'WPT Global',
+    text: `
+WPT Global is part of the famous World Poker Tour brand. 
+Big tournaments, modern software, and a fast-growing community.
+    `
+  },
+  coinpoker: {
+    name: 'CoinPoker',
+    text: `
+CoinPoker is a crypto-only poker room with instant deposits/withdrawals. 
+Soft games, unique promotions, and privacy features. Great for international players.
+    `
+  },
+  '4poker': {
+    name: '4Poker',
+    text: `
+4Poker is a new room with generous bonuses and up to 50% rakeback. 
+User-friendly app, easy deposits, and a growing player pool.
+    `
+  },
+  phenompoker: {
+    name: 'Phenom Poker',
+    text: `
+Phenom Poker is a boutique site with high rakeback and strong community focus.
+Frequent promos and direct support for grinders.
+    `
+  },
+  ipokerit: {
+    name: 'iPoker.it Italy',
+    text: `
+iPoker.it is Italy's regulated network. 
+Solid games, reliable payments, and popular with southern European players.
+    `
+  },
+  ggpoker: {
+    name: 'GGPoker',
+    text: `
+GGPoker is the world's largest poker site. 
+Huge tournaments, great software, and advanced tracking tools. Best for volume players.
+    `
+  },
+  unibet: {
+    name: 'Unibet',
+    text: `
+Unibet Poker is beginner-friendly with anonymous tables and fun promos.
+One of the softest player pools in Europe.
+    `
+  },
+};
+
+export default function RoomInfo() {
+  const router = useRouter();
+  const { room } = router.query;
+
+  // Show loading until router.query is ready
+  if (!room) return <div>Loading...</div>;
+
+  const info = roomContent[room.toLowerCase()] || {
+    name: 'Unknown Room',
+    text: 'No info yet! Please check back soon or contact us.',
+  };
+
+  return (
+    <div style={{
+      maxWidth: 600,
+      margin: '3rem auto',
+      padding: '2rem',
+      border: '1px solid #eee',
+      borderRadius: 12,
+      background: '#fff',
+      fontFamily: 'sans-serif'
+    }}>
+      <h1 style={{textAlign: 'center', fontSize: '2rem'}}>{info.name}</h1>
+      <p style={{fontSize: '1.15rem', whiteSpace: 'pre-line'}}>{info.text}</p>
+      <div style={{marginTop: '2rem', textAlign: 'center'}}>
+        <a href="/" style={{color: '#0070f3', textDecoration: 'underline', fontWeight: 600}}>← Back to Poker Rewards</a>
+      </div>
+    </div>
+  );
+}
