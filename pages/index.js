@@ -19,7 +19,7 @@ const rooms = [
   },
   {
     name: 'CoinPoker',
-    logo: '/images/coinpoker.jpeg',
+    logo: '/images/coinpoker.png',
     href: 'https://coinpoker.com/',
     depositBonus: '150% up to $2,000',
     maxRakeback: '33%+',
